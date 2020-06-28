@@ -1,0 +1,10 @@
+<h3>List of Todo task </h3>
+
+<div>
+    <ul class="list-group">
+        <div *ngFor ="let data of tododata ; let i= index">
+      <input type="checkbox" (click)="doneItem(i,data)" >  <li class="list-group-item"><h5>{{data.taskname}}</h5><h5>{{data.description}}</h5> <h5>{{data.repeatTask}}</h5></li>
+    </div>
+       
+      </ul>
+</div>

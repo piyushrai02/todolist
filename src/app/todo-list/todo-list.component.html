@@ -1,0 +1,22 @@
+<small class="text-danger" style="text-align: center;">{{textMsg}}</small>
+<div>
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+        <label>Task name</label>
+        <input type="text" name="taskname" placeholder="task name" formControlName="taskname">
+        <label>Task description</label>
+        <textarea name="description" formControlName="description"></textarea>
+        <label> Repeating Task</label>
+        <select name="repettask" id="task" formControlName="repeatTask">
+            <option value="yes">Y</option>
+            <option value="no">N</option>
+        </select>
+    </form>
+</div>
+<div class="row" style="margin: 0px;padding: 0px;">
+    <div class="col-sm-6">
+        <app-todo-child></app-todo-child>
+    </div>
+    <div class="col-sm-6">
+        <app-todo-donetask></app-todo-donetask>
+    </div>
+</div>
